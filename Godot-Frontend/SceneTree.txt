@@ -1,1 +1,13 @@
-
+RootNode.tscn
+├── RootNode (Main Parent Node)
+│   ├── DrawingSender (Parent Node that handles sending user drawing to Flask App and receiving and displaying AI critique)
+    │    ├── ReviewButton (Button when pressed sends a signal to DrawingSender to initiate review generation process)
+    │    ├── HTTPRequest (Node that carries out HTTP request, and sends signal to DrawingSender to call callback function when request completes)
+    │    ├── ReviewLabel (Displays review or error message if error during communication with server)
+│
+│   ├── DrawingViewport (Subviewport node for DrawingBoard, this allows to display input within the DrawingBoard)
+    │    ├── WhiteScreen (White rectangle so canvas can appear white, must be a child of DrawingViewport)
+    │    ├── DrawNode (Node that contains drawing logic)
+│   ├── DrawingBoard (TextureRect that detects input from user whose input handling is dealt by its viewport, its Viewport is set to DrawingViewport)
+│   ├── ClearButton (Resets Drawing Board, signal when pressed sent to DrawNode)
+│   └── SaveButton (Must be pressed before reviewing, as this button saves image in user drawing path from which DrawingSender gets the image to send, signal sent to RootNode)
