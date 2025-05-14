@@ -12,8 +12,8 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 app = Flask(__name__)
 
 # Load CLIP Model (OpenAI) to classify user image object and its quality 
-model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
-modelProcessor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
+model = CLIPModel.from_pretrained("openai/clip-vit-small-patch32")
+processor = CLIPProcessor.from_pretrained("openai/clip-vit-small-patch32")
 
 # Fixed labels : - Will potentially expand dynamically by adding newly identified labels for the model to classify from later
 
