@@ -10,9 +10,9 @@ Draw a cat, dog, tree, cloud, fish, house, car, person flower or sun (More words
   ```bash
   export GROQ_API_KEY=your_groq_key_here
 
-- You can then run the backend using 'python CritiqueGenerator.py'
+- Start up the backend using 'python CritiqueGenerator.py'
 - Then download the Godot Frontend and run the app, once you do you can start drawing on the drawing board, when you are happy with the drawing click the "Save" button and then
-  "Review" to generate the review !
+  "Review" to generate the review which will appear next to the drawing board !
 - The "Clear" button can be used anytime you are unhappy with the drawing currently made and want to start over
 
 
